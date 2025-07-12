@@ -8,6 +8,17 @@ public class LoginResponse {
     private String password;
     private String role;
 
+    @Override
+    public String toString() {
+        return "LoginResponse{" +
+                "id='" + id + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", role='" + role + '\'' +
+                '}';
+    }
+
     public LoginResponse() {
     }
 

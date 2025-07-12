@@ -28,6 +28,7 @@ public class AuthService {
 
     public LoginResponseJwt validateUser(LoginRequest loginRequest) {
         LoginResponse loginResponse = userClient.getUserDeatilsByEmial(loginRequest.getEmail());
+        log.info("loginResponse:{}",loginResponse);
         LoginResponseJwt loginResponseJwt = new LoginResponseJwt();
         loginResponseJwt.setEmail(loginResponse.getEmail());
         loginResponseJwt.setRole(loginResponse.getRole());
@@ -41,6 +42,7 @@ public class AuthService {
                 loginResponseJwt.setToken(token);
             }
         }
+        System.out.println(loginResponse);
         return loginResponseJwt;
     }
 }

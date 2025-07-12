@@ -18,11 +18,9 @@ public class UserClient {
         this.userServiceWebClient = userServiceWebClient;
     }
 
-
-
-
     public LoginResponse getUserDeatilsByEmial(String email){
         log.info(email);
+        log.info("Hey there ");
         return userServiceWebClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .path("/admin/userLogin")
