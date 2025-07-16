@@ -30,6 +30,7 @@ public class JwtUtil {
     @Value("${jwt.expiration}")
     private long expiry;
 
+
     public  String generateToken(LoginResponse userDeatils){
         return Jwts.builder().setSubject(userDeatils.getEmail())
                 .claim("role",userDeatils.getRole())
